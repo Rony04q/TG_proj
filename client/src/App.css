@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+/* client/src/App.css */
+
+/* Define your PDF colors */
+:root {
+  --brand-primary: #4A6FFF;
+  --brand-secondary: #333333;
+  --brand-body: #555555;
+  --brand-background: #F9FAFB;
+  --brand-verified: #28a745;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Override Bootstrap's primary button color */
+.btn-primary {
+  background-color: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-primary:hover {
+  opacity: 0.9;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Custom text and background colors */
+.text-primary {
+  color: var(--brand-primary) !important;
 }
 
-.App-link {
-  color: #61dafb;
+.text-secondary {
+  color: var(--brand-secondary) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-body {
+  color: var(--brand-body) !important;
+}
+
+.bg-light-blue {
+  background-color: var(--brand-background);
 }
