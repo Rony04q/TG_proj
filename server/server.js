@@ -89,4 +89,8 @@ app.get('/api/profiles/:worker_id/secure', protect, async (req, res) => {
 });
 
 
-app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
+// ## THIS IS THE ONLY LINE YOU NEED TO CHANGE ##
+// Listen on all network interfaces, not just localhost
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on ALL network interfaces at port ${PORT}`);
+});
