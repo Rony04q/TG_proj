@@ -12,16 +12,12 @@ const NotificationBox = ({ message, type = 'info' }) => {
     }
 
     // Determine the Bootstrap class based on the 'type' prop
-    // The 'mt-3 mb-3' adds margin for spacing
-    const alertClass = `alert alert-${type} mt-3 mb-3 text-center shadow-sm`;
+    const alertClass = `alert alert-${type} mt-3 mb-3 text-center`;
 
     return (
         <div className="row justify-content-center">
-            <div className="col-md-12">
+            <div className="col-md-10">
                 <div className={alertClass} role="alert">
-                    <span className="fw-bold me-2">
-                        {type === 'success' ? '✅ Success:' : type === 'danger' ? '❌ Error:' : 'ⓘ Info:'}
-                    </span>
                     {message}
                 </div>
             </div>
